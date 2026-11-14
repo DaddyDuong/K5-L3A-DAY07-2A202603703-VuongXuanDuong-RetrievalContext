@@ -1,5 +1,11 @@
 # Starter Day 7
 
+**Phần đã triển khai trong repo này:** `day7_agent.py` kết nối model OpenRouter
+với Day 6; `retrieval.py` cung cấp dense, lexical TF-IDF và hybrid RRF;
+`benchmark_retrieval.py` so sánh ba phương pháp trên dev. Xem
+[hướng dẫn chạy](../RUN_AGENT.md) và [kết quả dev](../artifacts/retrieval/README.md).
+Các mục dưới mô tả khung starter gốc và cách thay adapter nếu cần.
+
 | File | Công dụng |
 |---|---|
 | `agentic.py` | Khung agent ví dụ với số lượt search, top-k và context budget có thể cấu hình |

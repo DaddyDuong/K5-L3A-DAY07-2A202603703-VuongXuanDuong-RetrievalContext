@@ -1,0 +1,14 @@
+{
+  "status": "development discovery run; superseded after shared protocol/parser fixes",
+  "not_final_comparison": true,
+  "errors": 15,
+  "total_runs": 51,
+  "reported_cost_usd": 0.00872178,
+  "changes_before_next_full_run": [
+    "Ignore Python code when extracting citations",
+    "Explicit finish.abstain boolean, retained as abstain even with valid background citations",
+    "Concise grounded answers and valid-JSON instruction applied to all configurations",
+    "One JSON-format-only retry, with original response and cost retained"
+  ],
+  "reason": "Initial failures were parser/JSON protocol errors and refusal status ambiguity, not provider connectivity. All 51 runs are retained; next comparison reruns all three configurations with common fixes."
+}

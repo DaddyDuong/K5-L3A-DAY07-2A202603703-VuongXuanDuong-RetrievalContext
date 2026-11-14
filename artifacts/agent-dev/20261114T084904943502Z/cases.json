@@ -1,0 +1,345 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "read() và readline() khác nhau như thế nào về phần nội dung đọc từ file và kiểu giá trị trả về?",
+    "expected_answer": "read() đọc nội dung file, còn readline() đọc dòng kế tiếp; cả hai trả về chuỗi.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 320,
+    "gold_printed_page": 310,
+    "evidence_quote": "The read() function reads the contents of a file and returns a string.\n        • The readline() function reads the next line in a file and returns a string.",
+    "filter": {},
+    "topic": "14.1_reading",
+    "type": "comparison",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 339,
+        "evidence_quote": "data = file.read()            Read the entire contents of a file. The variable data is a string.\n\n data =\n                               Read the next line of a file. The variable data is a string.\n file.readline()"
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Phương thức nào đọc tất cả các dòng của file thành danh sách chuỗi và giữ thứ tự dòng?",
+    "expected_answer": "readlines() trả về danh sách chuỗi gồm mọi dòng theo thứ tự trong file.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 320,
+    "gold_printed_page": 310,
+    "evidence_quote": "The readlines() function reads the individual lines of a file and returns a string list containing all the\n            lines of the file in order.",
+    "filter": {},
+    "topic": "14.1_reading",
+    "type": "direct",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 339,
+        "evidence_quote": "data =\n                               Read all lines of a file. The variable data is a list of strings.\n file.readlines()"
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "Nếu muốn ghi một giá trị không phải chuỗi bằng write(), cần chuyển đổi giá trị như thế nào trước khi ghi?",
+    "expected_answer": "Phải chuyển giá trị sang chuỗi; write() chỉ nhận tham số chuỗi.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 324,
+    "gold_printed_page": 314,
+    "evidence_quote": "The write() function is used to write to an already opened file. The write() function will only accept a string\n      parameter. Other variable types must be cast to string before writing using write().",
+    "filter": {},
+    "topic": "14.2_writing",
+    "type": "condition",
+    "alternative_gold": [],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "write() có tự thêm ký tự xuống dòng giống print() không, và phải làm gì nếu cần xuống dòng?",
+    "expected_answer": "Không; phải thêm tường minh ký tự xuống dòng \\n vào chuỗi được ghi.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 324,
+    "gold_printed_page": 314,
+    "evidence_quote": "The write() function does not automatically add a newline character as the print() function does. A\n      newline must be added explicitly by adding a newline ('\\n') character.",
+    "filter": {},
+    "topic": "14.2_writing",
+    "type": "comparison",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 339,
+        "evidence_quote": "file.write(\"Have a            Writes a line to a file. In contrast to print(), the write() function does not\n nice day!\\n\")                 automatically append a newline."
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Theo phần Writing to files, close() thực hiện hai việc gì với file?",
+    "expected_answer": "Hoàn tất các thay đổi và đóng file.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 325,
+    "gold_printed_page": 315,
+    "evidence_quote": "The close() function finalizes changes\nand closes the file.",
+    "filter": {},
+    "topic": "14.2_writing",
+    "type": "direct",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 339,
+        "evidence_quote": "file.close()                  Close a file after making changes."
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Trong chương 14 — Files, sách giới thiệu thư viện nào để trích xuất thông tin từ PDF?",
+    "expected_answer": "PyPDF.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 331,
+    "gold_printed_page": 321,
+    "evidence_quote": "PyPDF (https://openstax.org/r/100readthedocs) is a popular library that can be used to extract information\n from PDF files.",
+    "filter": {
+      "chapter": 14
+    },
+    "topic": "14.3_file_libraries",
+    "type": "metadata",
+    "alternative_gold": [],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "Theo danh sách runtime errors, tên file hoặc đường dẫn không hợp lệ có thể gây ngoại lệ nào?",
+    "expected_answer": "FileNotFoundError.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 331,
+    "gold_printed_page": 321,
+    "evidence_quote": "FileNotFoundError: The filename or path is invalid.",
+    "filter": {},
+    "topic": "14.4_exceptions",
+    "type": "condition",
+    "alternative_gold": [],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "Trong xử lý ngoại lệ, try và except đảm nhiệm những vai trò gì?",
+    "expected_answer": "try chạy đoạn code có thể phát sinh ngoại lệ; except chạy code phản hồi ngoại lệ.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 333,
+    "gold_printed_page": 323,
+    "evidence_quote": "A try statement runs code that might\nraise an exception. An except clause runs code in response to the exception.",
+    "filter": {},
+    "topic": "14.4_exceptions",
+    "type": "comparison",
+    "alternative_gold": [],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "Hai giai đoạn đầu tiên của vòng đời khoa học dữ liệu được sách nêu theo thứ tự nào?",
+    "expected_answer": "Thu thập dữ liệu (data acquisition), rồi khám phá dữ liệu (data exploration).",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 342,
+    "gold_printed_page": 332,
+    "evidence_quote": "The data science life cycle is an iterative process\n      that starts with data acquisition, followed by data exploration.",
+    "filter": {},
+    "topic": "15.1_lifecycle",
+    "type": "direct",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 367,
+        "evidence_quote": "The data science life cycle includes 1) data acquisition, 2) data exploration, 3) data analysis, and 4)\n   reporting."
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Trong chương 15 — Data Science, dùng hàm NumPy nào để chuyển một list hoặc tuple Python thành ndarray?",
+    "expected_answer": "np.array().",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 344,
+    "gold_printed_page": 334,
+    "evidence_quote": "Creating an ndarray by converting a Python list or tuple using the np.array() function.",
+    "filter": {
+      "chapter": 15
+    },
+    "topic": "15.2_numpy",
+    "type": "metadata",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 368,
+        "evidence_quote": "np.array()                               Creates an ndarray from a list or tuple."
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "Hai hàm NumPy nào được dùng để tạo mảng toàn số 0 và mảng toàn số 1, tương ứng?",
+    "expected_answer": "np.zeros() tạo mảng toàn 0; np.ones() tạo mảng toàn 1.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 344,
+    "gold_printed_page": 334,
+    "evidence_quote": "Using built-in functions like np.zeros() and np.ones() for creating an array of all 0's or all 1's,\n         respectively.",
+    "filter": {},
+    "topic": "15.2_numpy",
+    "type": "comparison",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 368,
+        "evidence_quote": "np.zeros()                               Creates an array of zeros.\n\n       np.ones()                                Creates an array of ones."
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "Series và DataFrame khác nhau thế nào về số chiều, và các cột của DataFrame có bắt buộc cùng kiểu dữ liệu không?",
+    "expected_answer": "Series là mảng có nhãn một chiều; DataFrame là cấu trúc có nhãn hai chiều, các cột có thể khác kiểu dữ liệu.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 346,
+    "gold_printed_page": 336,
+    "evidence_quote": "Series: A Series is a one-dimensional labeled array.\n         ◦ DataFrame: A DataFrame is a two-dimensional labeled data structure that consists of columns and\n           rows. A DataFrame can be thought of as a spreadsheet-like data structure where each column\n           represents a Series. DataFrame is a heterogeneous data structure where each column can have a\n           different data type.",
+    "filter": {},
+    "topic": "15.3_pandas",
+    "type": "comparison",
+    "alternative_gold": [],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Khi truy cập dữ liệu trong DataFrame, loc[] và iloc[] chọn vị trí bằng cách nào?",
+    "expected_answer": "loc[] dùng nhãn dòng/cột; iloc[] dùng chỉ số nguyên.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 355,
+    "gold_printed_page": 345,
+    "evidence_quote": "Label-based indexing using loc[]: loc[] allows you to access data in a DataFrame using row/column\n    labels. Ex: df.loc[row_label, column_label] returns specific data at the intersection of row_label\n    and column_label.\n • Integer-based indexing using iloc[]: iloc[] allows you to access data in a DataFrame using integer-based\n    indexes. Integer indexes can be passed to retrieve specific data. Ex: df.iloc[row_index,\n    column_index] returns specific data at the index row_index and column_index.",
+    "filter": {},
+    "topic": "15.4_indexing",
+    "type": "comparison",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 369,
+        "evidence_quote": "loc[]                              Allows for accessing data in a DataFrame using row/column labels.\n\n iloc[]                             Allows for accessing data in a DataFrame using row/column\n                                    integer-based indexes."
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "Biểu thức df[condition] giữ lại những hàng nào trong DataFrame?",
+    "expected_answer": "Chỉ các hàng thỏa mãn điều kiện.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 356,
+    "gold_printed_page": 346,
+    "evidence_quote": "Slicing based on a condition: df[condition] selects only the rows that meet the given condition.",
+    "filter": {},
+    "topic": "15.4_filtering",
+    "type": "condition",
+    "alternative_gold": [
+      {
+        "gold_source_id": "openstax-introduction-python-ch14-15",
+        "gold_page": 369,
+        "evidence_quote": "df[condition]                      Selects only the rows that meet the given condition."
+      }
+    ],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Mục tiêu chính của phân tích khám phá dữ liệu (EDA) được sách mô tả là gì?",
+    "expected_answer": "Làm quen với dữ liệu và đánh giá chất lượng dữ liệu.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 354,
+    "gold_printed_page": 344,
+    "evidence_quote": "The\n      main goal of EDA is to become familiar with the data and assess the quality of the data.",
+    "filter": {},
+    "topic": "15.4_eda_overview",
+    "type": "paraphrase",
+    "alternative_gold": [],
+    "attribution": "Access for free at openstax.org.",
+    "answerable": true
+  },
+  {
+    "id": "u01",
+    "split": "dev",
+    "answerable": false,
+    "question": "Theo tài liệu, kích thước tệp lớn nhất tính bằng GB mà write() có thể ghi trên Windows 11 dùng NTFS là bao nhiêu?",
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus chỉ giới thiệu đọc/ghi file Python, không có Windows 11/NTFS hoặc giới hạn file theo GB.",
+    "absence_check": {
+      "terms": [
+        "NTFS",
+        "Windows 11",
+        "maximum file",
+        "file size",
+        "gigabyte"
+      ],
+      "relevant_pages": [
+        324,
+        325,
+        339
+      ]
+    }
+  },
+  {
+    "id": "u02",
+    "split": "dev",
+    "answerable": false,
+    "question": "Theo tài liệu, phép cộng mảng NumPy nhanh hơn vòng lặp trên list Python chính xác bao nhiêu lần khi chạy trên CPU Intel Core i9-14900K?",
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus nói NumPy tối ưu hiệu năng, không có benchmark số lần tăng tốc hay CPU i9-14900K.",
+    "absence_check": {
+      "terms": [
+        "14900",
+        "benchmark",
+        "speed",
+        "faster",
+        "performance"
+      ],
+      "relevant_pages": [
+        343,
+        344,
+        345,
+        368
+      ]
+    }
+  }
+]

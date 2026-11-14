@@ -23,6 +23,15 @@ Index một tài liệu thực tế từ **100 trang** có bảng, ảnh và bi�
 
 ## Bắt đầu
 
+**Luồng agent đã kết nối Day 6:** xem [cách chạy model thật và đọc trace](RUN_AGENT.md).
+Đã có [so sánh ba retriever](artifacts/retrieval/README.md) và
+[hai thí nghiệm cải thiện agent trên 17 câu dev](artifacts/agent-dev/README.md).
+Đã đánh giá [7 câu test mới sau khi khóa cấu hình](artifacts/agent-test/README.md).
+Xem [hướng dẫn tái lập](REPRODUCE.md),
+[báo cáo cá nhân](report/individual/2A202603703_VuongXuanDuong.md) và
+[trạng thái bài nộp](SUBMISSION_STATUS.md). Nhãn do Codex đối chiếu nguồn,
+chưa được học viên xác nhận.
+
 1. Đọc [hướng dẫn](GUIDE.md), [rubric](RUBRIC.md) và [quy tắc](RULES.md).
 2. Tạo repo cá nhân theo [cách nộp bài](SUBMISSION.md), chuẩn bị đầu ra Day 6 và model hỗ trợ tool calling.
 3. Dùng hoặc thay thế [starter](starter/README.md); bạn cần kết nối model và vector store thật.

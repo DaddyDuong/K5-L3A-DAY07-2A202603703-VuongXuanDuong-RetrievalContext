@@ -1,0 +1,48 @@
+{
+  "metrics": [
+    {
+      "method": "dense",
+      "n": 15,
+      "errors": 0,
+      "median_ms": 24.20618000178365,
+      "service_cost_usd": 0,
+      "cost_note": "Local retrieval; hardware/electricity excluded",
+      "hit1_n": 9,
+      "hit1_rate": 0.6,
+      "hit3_n": 11,
+      "hit3_rate": 0.7333333333333333,
+      "context_hit_n": 11,
+      "context_hit_rate": 0.7333333333333333
+    },
+    {
+      "method": "lexical",
+      "n": 15,
+      "errors": 0,
+      "median_ms": 0.5227539986663032,
+      "service_cost_usd": 0,
+      "cost_note": "Local retrieval; hardware/electricity excluded",
+      "hit1_n": 5,
+      "hit1_rate": 0.3333333333333333,
+      "hit3_n": 10,
+      "hit3_rate": 0.6666666666666666,
+      "context_hit_n": 10,
+      "context_hit_rate": 0.6666666666666666
+    },
+    {
+      "method": "hybrid",
+      "n": 15,
+      "errors": 0,
+      "median_ms": 27.65156099849264,
+      "service_cost_usd": 0,
+      "cost_note": "Local retrieval; hardware/electricity excluded",
+      "hit1_n": 9,
+      "hit1_rate": 0.6,
+      "hit3_n": 11,
+      "hit3_rate": 0.7333333333333333,
+      "context_hit_n": 11,
+      "context_hit_rate": 0.7333333333333333
+    }
+  ],
+  "selected_on_dev": "dense",
+  "scope": "retrieval-only dev benchmark; no model-generated answers"
+}

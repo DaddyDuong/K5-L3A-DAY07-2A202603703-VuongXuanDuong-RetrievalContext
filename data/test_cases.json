@@ -1,0 +1,97 @@
+[
+  {
+    "id": "t01",
+    "split": "test",
+    "answerable": true,
+    "question": "Nếu không truyền tham số mode vào open(), file được mở ở chế độ mặc định nào và có cho phép sửa nội dung không?",
+    "expected_answer": "Mặc định chỉ đọc (read-only), không cho phép thay đổi nội dung.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 323,
+    "evidence_quote": "A file may be opened for reading, allowing no changes, or for writing, allowing changes to occur in the file. The\nmode defines whether a file is opened for reading only or for writing. The default mode of the open()\nfunction is reading only.",
+    "alternative_gold": [],
+    "filter": {},
+    "topic": "default_file_mode",
+    "evidence_checked_against_pdf": true,
+    "attribution": "Access for free at openstax.org."
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "answerable": true,
+    "question": "Trong chương 14, muốn mở một file nằm ở thư mục khác với file Python đang chạy, cần cung cấp thông tin gì cùng tên file?",
+    "expected_answer": "Dùng đường dẫn (path) cùng tên file để xác định vị trí trong thư mục khác.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 327,
+    "evidence_quote": "The path can be used along with the filename to open a file\nin any folder location.",
+    "alternative_gold": [],
+    "filter": {
+      "chapter": 14
+    },
+    "topic": "file_paths",
+    "evidence_checked_against_pdf": true,
+    "attribution": "Access for free at openstax.org."
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "answerable": true,
+    "question": "Theo mô tả định dạng CSV trong sách, ký tự nào phân cách các hàng và ký tự nào phân cách các ô?",
+    "expected_answer": "Các hàng ngăn bằng ký tự xuống dòng; các ô ngăn bằng dấu phẩy.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 329,
+    "evidence_quote": "A CSV file is simply a text file with rows separated by newline \\n characters and cells separated by commas.",
+    "alternative_gold": [],
+    "filter": {},
+    "topic": "csv_structure",
+    "evidence_checked_against_pdf": true,
+    "attribution": "Access for free at openstax.org."
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "answerable": true,
+    "question": "Trong chương 15, unique() gọi trên một cột Pandas trả về loại kết quả gì và các giá trị có đặc điểm nào?",
+    "expected_answer": "Trả về một array gồm các giá trị duy nhất/không lặp trong cột.",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 353,
+    "evidence_quote": "Returns an\n                        array of\n                        unique\n unique()               values in a   df['Season']\n                                                        ['Summer' 'Fall' 'Winter']\n                        column        \\.unique()\n                        when called\n                        on a\n                        column.",
+    "alternative_gold": [],
+    "filter": {
+      "chapter": 15
+    },
+    "topic": "pandas_unique",
+    "evidence_checked_against_pdf": true,
+    "attribution": "Access for free at openstax.org."
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "answerable": true,
+    "question": "Theo bảng các loại biểu đồ, loại nào biểu diễn quan hệ giữa hai biến bằng các điểm dữ liệu riêng lẻ để nhận diện tương quan, cụm và điểm ngoại lai?",
+    "expected_answer": "Scatter plot (biểu đồ phân tán).",
+    "gold_source_id": "openstax-introduction-python-ch14-15",
+    "gold_page": 361,
+    "evidence_quote": "Individual data points representing the relationship between       Identify correlations,\n Scatter plot\n                    two variables                                                      clusters, and outliers.",
+    "alternative_gold": [],
+    "filter": {},
+    "topic": "scatter_plot",
+    "evidence_checked_against_pdf": true,
+    "attribution": "Access for free at openstax.org."
+  },
+  {
+    "id": "tu01",
+    "split": "test",
+    "answerable": false,
+    "question": "Theo tài liệu, pandas.read_csv() giải mã tệp CSV được mã hóa AES-256 bằng tham số nào?",
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Không có nội dung mã hóa AES hoặc giải mã CSV; chỉ có mô tả đọc CSV vào DataFrame."
+  },
+  {
+    "id": "tu02",
+    "split": "test",
+    "answerable": false,
+    "question": "Theo tài liệu, giá trị dpi mặc định của Matplotlib khi xuất một biểu đồ PNG là bao nhiêu?",
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Không có thiết lập dpi hoặc giá trị độ phân giải xuất PNG trong corpus; các ví dụ tập trung tạo và hiển thị biểu đồ."
+  }
+]

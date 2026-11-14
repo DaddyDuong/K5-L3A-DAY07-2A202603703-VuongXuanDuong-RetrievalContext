@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-11-14T09:04:32.371169+00:00",
+  "purpose": "Freeze configuration and new test questions before any test retrieval/model calls",
+  "selected": {
+    "selected_config": "baseline",
+    "split": "dev",
+    "student_confirmed": false,
+    "status": "frozen_on_dev_using_draft_source_reviews",
+    "settings": {
+      "query_language": "auto",
+      "context_policy": "arrival"
+    },
+    "method": "dense",
+    "top_k": 3,
+    "max_searches": 3,
+    "budget_chars": 4000,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "provider": "particle-ai/us/flex",
+    "selection_rule": "Require zero provider errors and correct abstention on both unanswerable cases; maximize draft grounded-answer total, then supported citation fraction, then context hit count, then lower reported API cost, then lower median wall time; baseline wins final tie.",
+    "benchmark_sha256": "3d5216ac560c656d630465f57ab63989786665e2b967c70cb07269421a2732ac",
+    "run_config_sha256": "b4b5d16147f4ea0b482b1fd08f5dfe9d5ed0fe13fc482dc7ba50ae86bd86a455",
+    "review_sha256": {
+      "baseline": "b54941b330e781ea1998c2401ae0936dbed74ae2809698fda2ccea799211f054",
+      "english": "f0abdc03f3faea0315fc11cca197e2e395f77e2356cc1015fc304feec4e9f2b1",
+      "relevance": "86a1596fe72d4c2bf9dab71152c81230d08d48520e076a701203e4e082d30e17"
+    },
+    "test_started": false
+  },
+  "selection_sha256": "8cb08f5b8141438a4c7a6a48ed4eff80a985d49f803f376a27a949cd27cb36b9",
+  "chunk_snapshot_sha256": "83594ca4e3a14e6b1c8aa2952c239b6da6b7f0269a5e7a7037df9cb42b82f7ee",
+  "files_sha256": {
+    "data/dev_cases.json": "3d5216ac560c656d630465f57ab63989786665e2b967c70cb07269421a2732ac",
+    "data/test_cases.json": "394e884ff5440d9fe57d046d6c674bbdc5b81ee74256b8024d70232a714a6576",
+    "data/test_absence_audit.json": "049490548329a032c01cc22d8b74e7093099c29d3b74a44ed718030ffa73d8f8",
+    "artifacts/dev_review_before_test.json": "bf7f1d7a0f4085bb9bf3612fa8666a2ba051fc59c7bd5edf0b4927432fa4c39a",
+    "artifacts/agent-dev/20261114T085042869723Z/selection.json": "8cb08f5b8141438a4c7a6a48ed4eff80a985d49f803f376a27a949cd27cb36b9",
+    "artifacts/agent-dev/20261114T085042869723Z/config.json": "b4b5d16147f4ea0b482b1fd08f5dfe9d5ed0fe13fc482dc7ba50ae86bd86a455",
+    "artifacts/agent-dev/20261114T085042869723Z/baseline/reviews.json": "b54941b330e781ea1998c2401ae0936dbed74ae2809698fda2ccea799211f054",
+    "artifacts/agent-dev/20261114T085042869723Z/english/reviews.json": "f0abdc03f3faea0315fc11cca197e2e395f77e2356cc1015fc304feec4e9f2b1",
+    "artifacts/agent-dev/20261114T085042869723Z/relevance/reviews.json": "86a1596fe72d4c2bf9dab71152c81230d08d48520e076a701203e4e082d30e17",
+    "starter/agentic.py": "1530e9006132d6bedae7b453c95bdb4b1ea7e9dcf76bd03a32498aef084e6e71",
+    "starter/day7_agent.py": "e7e0a309e7c9e39d8374e26d6f3a275ea80b2c32fc5c30b859e4f8df18946c83",
+    "starter/retrieval.py": "264ebe1b25e98a0bf528e116406a7fac959349cdebb96ab322fbd08a8c35b6b1",
+    "starter/baseline.py": "03b8b16c42be7d19c820e506f4cea2a7496c462a00c77d1cfc9e7fc972301fdf",
+    "starter/benchmark_retrieval.py": "da2b672832dde7c8692db59dd07ae4c62872fd7e1ae68d852f9090b2f3c10403",
+    "starter/benchmark_agent_dev.py": "6ee16526fa36a6cb56ccd32ee046af52be7a85900cbf1dd134dfc68fb832318f",
+    "starter/benchmark_agent_test.py": "6bee3ca6ffcc63f5f158bb2c901efe3f4b1f083f9f2f2a3c434d3ec50fbf5ead"
+  },
+  "test_design": "Five new answerable questions plus two new unanswerable questions, authored after dev selection; same source corpus, not a document-disjoint holdout. Evidence verified before retrieval.",
+  "label_status": "Codex source-based drafts, not student-confirmed labels"
+}

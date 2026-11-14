@@ -1,0 +1,42 @@
+{
+  "split": "test",
+  "started_at": "20261114T090432454098Z",
+  "freeze_sha256": "7841d7d17296644a3c48a4415c6ba311cf949e3109ce0f305e3df5fc9110fb8b",
+  "reproduction": false,
+  "config_aliases": {
+    "baseline": "baseline",
+    "selected": "baseline"
+  },
+  "unique_configurations": {
+    "baseline": {
+      "query_language": "auto",
+      "context_policy": "arrival"
+    }
+  },
+  "scope": "Baseline equals selected: shared traces, not independent replicated runs",
+  "workers": 3,
+  "cases_sha256": "394e884ff5440d9fe57d046d6c674bbdc5b81ee74256b8024d70232a714a6576",
+  "retrieval": {
+    "strategy": "C",
+    "chunks": 252,
+    "model": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimensions": 384,
+    "database": {
+      "postgres": "16.16 (Debian 16.16-1.pgdg12+1)",
+      "pgvector": "0.8.7"
+    },
+    "fingerprints": {
+      "config_sha256": "9945148689a3379d22fe4e487c003967a037d2724954388521de8677730038e6",
+      "questions_sha256": "81bb90bb97dbf49bc0a9399b16b0ffe5e05a2a8b6f473d37f8c5a6c2a9c4ab93",
+      "pages_sha256": "383fb2b1990351e9856237f08d9f6583fd03bb1f52ddef4871f230b1d356a1c1",
+      "source_code_sha256": "9411d1f3013d5cb422eda2fc55f880933fe06a2319d200830208dfcdd024218f"
+    },
+    "read_only": true,
+    "method": "dense",
+    "hybrid_candidates_per_retriever": 10,
+    "rrf_constant": 60,
+    "chunk_snapshot_sha256": "83594ca4e3a14e6b1c8aa2952c239b6da6b7f0269a5e7a7037df9cb42b82f7ee",
+    "lexical": "NFC/casefold word tokens; TF-IDF L2 cosine; global corpus IDF"
+  }
+}

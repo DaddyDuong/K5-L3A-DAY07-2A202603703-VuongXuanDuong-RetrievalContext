@@ -1,0 +1,25 @@
+{
+  "selected_config": "baseline",
+  "split": "dev",
+  "student_confirmed": false,
+  "status": "frozen_on_dev_using_draft_source_reviews",
+  "settings": {
+    "query_language": "auto",
+    "context_policy": "arrival"
+  },
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 3,
+  "budget_chars": 4000,
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "provider": "particle-ai/us/flex",
+  "selection_rule": "Require zero provider errors and correct abstention on both unanswerable cases; maximize draft grounded-answer total, then supported citation fraction, then context hit count, then lower reported API cost, then lower median wall time; baseline wins final tie.",
+  "benchmark_sha256": "3d5216ac560c656d630465f57ab63989786665e2b967c70cb07269421a2732ac",
+  "run_config_sha256": "b4b5d16147f4ea0b482b1fd08f5dfe9d5ed0fe13fc482dc7ba50ae86bd86a455",
+  "review_sha256": {
+    "baseline": "b54941b330e781ea1998c2401ae0936dbed74ae2809698fda2ccea799211f054",
+    "english": "f0abdc03f3faea0315fc11cca197e2e395f77e2356cc1015fc304feec4e9f2b1",
+    "relevance": "86a1596fe72d4c2bf9dab71152c81230d08d48520e076a701203e4e082d30e17"
+  },
+  "test_started": false
+}

@@ -1,0 +1,96 @@
+{
+  "scope": "All 52 indexed pages, not top-k retrieval",
+  "source_sha256": "383fb2b1990351e9856237f08d9f6583fd03bb1f52ddef4871f230b1d356a1c1",
+  "pages_checked": [
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370
+  ],
+  "reviewer": "Codex draft; pending student review",
+  "cases": [
+    {
+      "id": "u01",
+      "term_page_matches": {
+        "NTFS": [],
+        "Windows 11": [],
+        "maximum file": [],
+        "file size": [],
+        "gigabyte": []
+      },
+      "nearby_pages_reviewed": [
+        324,
+        325,
+        339
+      ],
+      "conclusion": "Corpus chỉ giới thiệu đọc/ghi file Python, không có Windows 11/NTFS hoặc giới hạn file theo GB."
+    },
+    {
+      "id": "u02",
+      "term_page_matches": {
+        "14900": [],
+        "benchmark": [],
+        "speed": [],
+        "faster": [],
+        "performance": [
+          344
+        ]
+      },
+      "nearby_pages_reviewed": [
+        343,
+        344,
+        345,
+        368
+      ],
+      "conclusion": "Corpus nói NumPy tối ưu hiệu năng, không có benchmark số lần tăng tốc hay CPU i9-14900K."
+    }
+  ]
+}

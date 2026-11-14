@@ -1,0 +1,5 @@
+# Use the Day 6 environment and its pinned dependencies for the real retriever.
+# These are the direct dependencies; embedding inference also requires PyTorch.
+python-dotenv
+psycopg[binary]
+sentence-transformers

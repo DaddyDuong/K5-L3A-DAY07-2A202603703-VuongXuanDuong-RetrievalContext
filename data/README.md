@@ -1,5 +1,29 @@
 # Định dạng dữ liệu
 
+## Benchmark đang dùng trong repo
+
+`dev_cases.json` gồm 15 câu có đáp án giữ nguyên từ dev Day 6 và 2 câu thiếu
+bằng chứng (`u01`, `u02`). Các câu có đáp án giữ schema Day 6
+(`gold_source_id`, `gold_page`, `evidence_quote`, `alternative_gold`), được
+`starter/benchmark_agent_dev.py` chấm trực tiếp; không truyền file này vào
+baseline CLI dùng schema `gold` bên dưới nếu chưa chuyển đổi.
+
+`dev_absence_audit.json` ghi SHA-256 corpus, tất cả 52 trang được quét, từ khóa,
+trang liên quan và kết luận cho hai câu thiếu bằng chứng. Không dựa vào việc
+top-k không tìm thấy để kết luận thiếu thông tin. Nhãn do Codex soạn/đối chiếu,
+chưa được học viên xác nhận. Hai file trên chỉ chứa dev.
+
+`test_cases.json` có 5 câu có đáp án mới và 2 câu thiếu bằng chứng mới, được
+chốt sau dev và trước khi chạy test. `test_absence_audit.json` kiểm tra thiếu
+bằng chứng trên toàn corpus. Evidence của 5 câu được đối chiếu text layer PDF.
+`benchmark.json` ghép hai tập thành 24 câu (20 có đáp án, 4 thiếu evidence),
+không đổi nhãn hay schema. Bộ test dùng chung corpus, không tách theo tài liệu.
+
+Access for free at openstax.org. Evidence từ OpenStax theo CC BY-NC-SA 4.0;
+giữ attribution theo corpus Day 6.
+
+## Schema starter gốc
+
 Các file `example_*.json` chỉ minh họa định dạng, không đủ để nộp bài. Dữ liệu thật là JSON array UTF-8; nếu dùng định dạng khác, ghi cách chuyển trong README.
 
 - **Chunk:** `id`, `text`, `source_id`, `source`, `page`, `metadata`. ID phải duy nhất; giữ phiên bản hoặc ngày nếu có.

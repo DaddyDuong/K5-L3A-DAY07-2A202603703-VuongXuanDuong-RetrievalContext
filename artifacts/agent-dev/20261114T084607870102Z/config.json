@@ -1,0 +1,76 @@
+{
+  "split": "dev",
+  "cases_sha256": "3d5216ac560c656d630465f57ab63989786665e2b967c70cb07269421a2732ac",
+  "case_ids": [
+    "q01",
+    "q02",
+    "q03",
+    "q04",
+    "q05",
+    "q06",
+    "q07",
+    "q08",
+    "q09",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "u01",
+    "u02"
+  ],
+  "configs": {
+    "baseline": {
+      "query_language": "auto",
+      "context_policy": "arrival"
+    },
+    "english": {
+      "query_language": "english",
+      "context_policy": "arrival"
+    },
+    "relevance": {
+      "query_language": "auto",
+      "context_policy": "relevance"
+    }
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "provider": "particle-ai/us/flex",
+  "workers": 3,
+  "hypotheses": {
+    "english": "Explicit English query instructions may improve bilingual retrieval over automatic query language.",
+    "relevance": "Reranking cumulative chunks by original-question cosine may retain better evidence within the same budget."
+  },
+  "selection_rule": "Require zero provider errors and correct abstention on both unanswerable cases; maximize draft grounded-answer total, then supported citation fraction, then context hit count, then lower reported API cost, then lower median wall time; baseline wins final tie.",
+  "review_status": "Codex draft source-based review required; pending student confirmation",
+  "code_sha256": {
+    "benchmark_agent_dev.py": "6ee16526fa36a6cb56ccd32ee046af52be7a85900cbf1dd134dfc68fb832318f",
+    "agentic.py": "6efb6512143f6b8477d5d551007199fbbf04397e855710792c1093ddcd9b1cc0",
+    "day7_agent.py": "13a28720de52d692ffc04cfe543bab2e71cd585c149c6495c3761b3ef6e85bd9",
+    "retrieval.py": "264ebe1b25e98a0bf528e116406a7fac959349cdebb96ab322fbd08a8c35b6b1"
+  },
+  "retrieval": {
+    "strategy": "C",
+    "chunks": 252,
+    "model": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimensions": 384,
+    "database": {
+      "postgres": "16.16 (Debian 16.16-1.pgdg12+1)",
+      "pgvector": "0.8.7"
+    },
+    "fingerprints": {
+      "config_sha256": "9945148689a3379d22fe4e487c003967a037d2724954388521de8677730038e6",
+      "questions_sha256": "81bb90bb97dbf49bc0a9399b16b0ffe5e05a2a8b6f473d37f8c5a6c2a9c4ab93",
+      "pages_sha256": "383fb2b1990351e9856237f08d9f6583fd03bb1f52ddef4871f230b1d356a1c1",
+      "source_code_sha256": "9411d1f3013d5cb422eda2fc55f880933fe06a2319d200830208dfcdd024218f"
+    },
+    "read_only": true,
+    "method": "dense",
+    "hybrid_candidates_per_retriever": 10,
+    "rrf_constant": 60,
+    "chunk_snapshot_sha256": "83594ca4e3a14e6b1c8aa2952c239b6da6b7f0269a5e7a7037df9cb42b82f7ee",
+    "lexical": "NFC/casefold word tokens; TF-IDF L2 cosine; global corpus IDF"
+  },
+  "setup_seconds": 10.09013853000215
+}

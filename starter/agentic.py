@@ -3,7 +3,7 @@
 Adapters are intentionally not provided: Day 6 has no fixed database schema and
 model providers differ. Never use fake adapters to report benchmark quality.
 """
-from typing import Any, Protocol
+from typing import Any, Callable, Protocol
 from baseline import pack_context
 
 
@@ -30,7 +30,8 @@ class Retriever(Protocol):
 
 def run_agent(question: str, controller: Controller, retriever: Retriever, *,
               filters: dict[str, Any] | None = None, max_searches: int = 4,
-              top_k: int = 3, budget: int = 800) -> dict[str, Any]:
+              top_k: int = 3, budget: int = 800,
+              context_selector: Callable | None = None) -> dict[str, Any]:
     """Return answer, citation IDs and trace; no benchmark gold enters this loop.
 
     A final answer without valid citations, an empty context, and a search limit
@@ -55,21 +56,26 @@ def run_agent(question: str, controller: Controller, retriever: Retriever, *,
             if len(results) > top_k or len({r['id'] for r in results}) != len(results):
                 raise ValueError('retriever phải trả tối đa top_k chunk ID duy nhất')
             candidates.extend(results)
-            context, ids = pack_context(candidates, budget=budget)
+            context, ids = (context_selector or pack_context)(candidates, budget=budget)
             chunks = {c['id']: c for c in candidates if c['id'] in ids}
             events.append({'event': 'search', 'query': query, 'filter': filters, 'results': results,
                            'context': context, 'context_ids': ids})
             # Send only the latest cumulative context; avoid multiplying the budget.
             history = [{'tool': 'search', 'queries': [e['query'] for e in events if e['event'] == 'search'],
                         'context': context, 'context_ids': ids}]
-        elif action.get('action') == 'answer':
+        elif action.get('action') in ('answer', 'abstain'):
             answer, citations = action.get('answer'), action.get('citations')
             if not isinstance(answer, str) or not isinstance(citations, list) or any(not isinstance(i, str) for i in citations):
                 raise ValueError('answer/citations không hợp lệ')
+            if action['action'] == 'abstain':
+                if not events or not answer.strip() or not all(i in chunks and f'[{i}]' in answer for i in citations):
+                    raise ValueError('abstain phải sau retrieval, có lý do và citation hợp lệ nếu dùng')
+                return {'status': 'abstain', 'answer': answer, 'citations': citations,
+                        'events': events + [{'event': 'abstain', 'reason': 'model_declared_insufficient_evidence'}]}
             valid = bool(answer.strip() and citations and all(i in chunks and f'[{i}]' in answer for i in citations))
             if valid:
                 return {'status': 'answered', 'answer': answer, 'citations': citations, 'events': events + [{'event': 'answer'}]}
             return {'status': 'abstain', 'answer': 'Không đủ bằng chứng để trả lời.', 'citations': [], 'events': events + [{'event': 'invalid_or_missing_citations'}]}
         else:
-            raise ValueError('action phải là search hoặc answer')
+            raise ValueError('action phải là search, answer hoặc abstain')
     return {'status': 'abstain', 'answer': 'Không đủ bằng chứng để trả lời.', 'citations': [], 'events': events}

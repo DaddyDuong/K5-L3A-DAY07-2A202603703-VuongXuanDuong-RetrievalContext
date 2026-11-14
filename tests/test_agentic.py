@@ -71,4 +71,28 @@ class AgentTests(unittest.TestCase):
         with self.assertRaises(ConnectionError):
             run_agent('q', Controller([{'action':'search','query':'q'}]), Broken())
 
+    def test_selector_can_replace_earlier_chunk_with_later_evidence(self):
+        from baseline import pack_context
+        other = {**CHUNK, 'id': 'c2'}
+        class Sequential:
+            def __init__(self): self.calls = 0
+            def search(self, query, *, filters, top_k):
+                self.calls += 1
+                return [CHUNK] if self.calls == 1 else [other]
+        actions = [{'action':'search','query':'first'}, {'action':'search','query':'second'},
+                   {'action':'answer','answer':'7 ngày [c2]','citations':['c2']}]
+        arrival = run_agent('q', Controller(actions), Sequential(), budget=60)
+        self.assertEqual(arrival['status'], 'abstain')
+        result = run_agent('q', Controller(actions), Sequential(), budget=60,
+                           context_selector=lambda rows, budget: pack_context(list(reversed(rows)), budget))
+        self.assertEqual(result['status'], 'answered')
+        self.assertEqual(result['events'][1]['context_ids'], ['c2'])
+
+    def test_explicit_abstention_keeps_supported_background_citations(self):
+        controller=Controller([{'action':'search','query':'q'},
+            {'action':'abstain','answer':'Thiếu bằng chứng. Nguồn chỉ nói hoàn tiền [c1].','citations':['c1']}])
+        result=run_agent('q',controller,Retriever([CHUNK]))
+        self.assertEqual(result['status'],'abstain')
+        self.assertEqual(result['citations'],['c1'])
+
 if __name__ == '__main__': unittest.main()

@@ -1,0 +1,94 @@
+{
+  "source_sha256": "383fb2b1990351e9856237f08d9f6583fd03bb1f52ddef4871f230b1d356a1c1",
+  "scope": "All 52 indexed pages, not retrieval top-k",
+  "pages_checked": [
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370
+  ],
+  "reviewer": "Codex draft; not student confirmed",
+  "cases": [
+    {
+      "id": "tu01",
+      "term_page_matches": {
+        "AES": [],
+        "encrypt": [],
+        "decrypt": [],
+        "encryption": [],
+        "decryption": []
+      },
+      "nearby_pages_reviewed": [
+        350,
+        368
+      ],
+      "conclusion": "Không có nội dung mã hóa AES hoặc giải mã CSV; chỉ có mô tả đọc CSV vào DataFrame."
+    },
+    {
+      "id": "tu02",
+      "term_page_matches": {
+        "dpi": [],
+        "savefig": [],
+        "resolution": [],
+        "dots per inch": []
+      },
+      "nearby_pages_reviewed": [
+        361,
+        362,
+        363,
+        364,
+        365,
+        366
+      ],
+      "conclusion": "Không có thiết lập dpi hoặc giá trị độ phân giải xuất PNG trong corpus; các ví dụ tập trung tạo và hiển thị biểu đồ."
+    }
+  ]
+}

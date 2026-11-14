@@ -1,0 +1,471 @@
+[
+  {
+    "query_id": "q01",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Đủ phạm vi đọc và kiểu string cho read/readline; đối chiếu trang 320/339.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "c751dd32ac6d8cfabd64d8712fd5be8a",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 320,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "      Using read() and reading lines\n      Python provides functions that can be called on a file object for reading the contents of a file:\n\n        • The read() function reads the contents of a file and returns a string.\n        • The readline() function reads the next line in a file and returns a string.\n        • The readlines() function reads the individual lines of a file and returns a string list containing all the\n            lines of the file in order.\n\n       EXAMPLE 14.1\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q02",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "readlines trả list các chuỗi theo thứ tự; ví dụ đọc danh sách ở trang 321 khớp.",
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "c751dd32ac6d8cfabd64d8712fd5be8a",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 320,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "      Using read() and reading lines\n      Python provides functions that can be called on a file object for reading the contents of a file:\n\n        • The read() function reads the contents of a file and returns a string.\n        • The readline() function reads the next line in a file and returns a string.\n        • The readlines() function reads the individual lines of a file and returns a string list containing all the\n            lines of the file in order.\n\n       EXAMPLE 14.1\n\n"
+      },
+      {
+        "id": "f512bbc55eac80c5b8582884d881dcef",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 339,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": " data =\n                               Read the next line of a file. The variable data is a string.\n file.readline()\n\n data =\n                               Read all lines of a file. The variable data is a list of strings.\n file.readlines()\n\n file.write(\"Have a            Writes a line to a file. In contrast to print(), the write() function does not\n nice day!\\n\")                 automatically append a newline.\n\n"
+      },
+      {
+        "id": "f7a2b1d2e8f7855515ce5e4f76bd278e",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 321,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "# Read the contents of the file into a string list\nstr_list = infile2.readlines()\n\n# Printing the third item in the string list.\nprint(\"Result of using readlines() and printing the third item in the string list:\")\nprint(str_list[2])\n\n# Always close the file once done using the file\ninfile2.close()\n\nThe code's output is:\n\nResult of using read():\n12\n55\n5\n91\nResult of using readlines() printing the third item in the string list:\n5"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q03",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Đáp án chính ép kiểu sang chuỗi đúng; nhưng bổ sung tên hàm str() không được nêu trong chunk được dẫn. Chấm bảo thủ phần grounding của chi tiết thêm.",
+    "citation_support": [
+      false,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "91a50e0c03047f4f744eea42514fe6b5",
+        "supported": false,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 324,
+        "reason": "Chunk yêu cầu cast sang string nhưng không nêu hàm str(); chi tiết cụ thể này vượt đoạn được dẫn.",
+        "evidence_text": "         3. A new file called newlog.txt must be created. Which of the following lines of code works best?\n            a. logfile = open(\"newlog.txt\")\n              b. logfile = open(\"newlog.txt\", 'w')\n              c. logfile = open(\"newlog.txt\", 'a')\n\n      Using write() and close()\n      The write() function is used to write to an already opened file. The write() function will only accept a string\n      parameter. Other variable types must be cast to string before writing using write().\n\n"
+      },
+      {
+        "id": "de88e77d68304a74ed2f8a5a88b0e70f",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 324,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "      The write() function does not automatically add a newline character as the print() function does. A\n      newline must be added explicitly by adding a newline ('\\n') character.\n\n      The write() function writes automatically to a temporary store called the file buffer. To ensure that the\n\n      Access for free at openstax.org"
+      }
+    ],
+    "answer_grade": 1,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q04",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Đúng việc write không tự thêm newline và phải thêm tường minh; kiểm tra từng chi tiết mở rộng riêng.",
+    "citation_support": [
+      true,
+      false,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "de88e77d68304a74ed2f8a5a88b0e70f",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 324,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "      The write() function does not automatically add a newline character as the print() function does. A\n      newline must be added explicitly by adding a newline ('\\n') character.\n\n      The write() function writes automatically to a temporary store called the file buffer. To ensure that the\n\n      Access for free at openstax.org"
+      },
+      {
+        "id": "1f2b689e5d3b65d2516ffdf8e5928cff",
+        "supported": false,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 339,
+        "reason": "Chunk bảng ghi file.write([...]), không nhận diện rõ writelines(); không đủ xác minh tên phương thức trong chi tiết mở rộng. Cần học viên đối chiếu lỗi/nhầm tên trong sách.",
+        "evidence_text": " file.write([\"Line             Writes multiple lines to a file. As with write(), a newline is not automatically\n 1\\n\", \"Line 2\\n\"])            added at the end of each line.\n\n try:\n                               Try to run statements that might raise an error. If any error is raised, run other\n     # Statements\n                               statements.\n except:\n     # Statements\n\n"
+      },
+      {
+        "id": "91a50e0c03047f4f744eea42514fe6b5",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 324,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "         3. A new file called newlog.txt must be created. Which of the following lines of code works best?\n            a. logfile = open(\"newlog.txt\")\n              b. logfile = open(\"newlog.txt\", 'w')\n              c. logfile = open(\"newlog.txt\", 'a')\n\n      Using write() and close()\n      The write() function is used to write to an already opened file. The write() function will only accept a string\n      parameter. Other variable types must be cast to string before writing using write().\n\n"
+      }
+    ],
+    "answer_grade": 1,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q05",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "close chốt thay đổi và đóng file, đúng đoạn trang 325.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "25c191068b280b2c41e4f860739e9540",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 325,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "14.2 • Writing to files   315\n\ninformation is written to a file, the close() function must be used. The close() function finalizes changes\nand closes the file.\n\n EXAMPLE 14.2\n\n Writing and appending to a file\n\n \"\"\"Operations for writing and appending to files.\"\"\"\n\n # Create a new file\n opfile = open(\"output.txt\", 'w')\n\n # Writing to the file\n opfile.write(\"Writing to a new file.\")\n\n # To add another line the newline character must be used\n opfile.write(\"\\nSecond line.\")\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q06",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "PyPDF được nêu rõ trong chunk trang 331; filter chapter=14 đúng.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "b9eb4e3f1072f3d8259303e994dde39d",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 331,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "14.4 • Handling exceptions   321\n\n Some types of non-Unicode files can be read using specialized libraries that support the reading and writing\n of different file types.\n\n PyPDF (https://openstax.org/r/100readthedocs) is a popular library that can be used to extract information\n from PDF files.\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q07",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "FileNotFoundError cho filename/path không hợp lệ; ví dụ file không tồn tại cũng được nguồn mô tả.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "c136f7d3f6d3fd1440d5ea540dc5836b",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 331,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": " • Describe two exceptions that may occur when reading files.\n • Write try/except statements that handle built-in exceptions.\n\nRuntime errors\nVarious errors may occur when reading a file:\n\n • FileNotFoundError: The filename or path is invalid.\n • IndexError/ValueError: The file's format is invalid.\n • Other errors caused by invalid contents of a file.\n\nWhen an error occurs, the program terminates with an error message.\n\n EXAMPLE 14.4\n\n"
+      },
+      {
+        "id": "340996450a7b59eaa0ceb01fc7d93ef7",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 333,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": " Enter a filename: try_open.py\n try_open.py has 9 lines\n Have a nice day!\n\n If the filename does not exist, a FileNotFoundError is raised on line 3. The program then jumps to the\n except clause on line 7 and continues to run. The resulting output is:\n\n Enter a filename: try_open.txt\n File not found: try_open.txt\n Have a nice day!\n\n CONCEPTS IN PRACTICE\n\n Predicting output with exceptions\n For each code snippet, what is the output?"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q08",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "try chạy code có thể ném ngoại lệ, except phản hồi; các mô tả chương trình tiếp tục/kết thúc có nguồn hỗ trợ.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "85933f30df989257db2f51fa930d6752",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 333,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "14.4 • Handling exceptions   323\n\n EXPLORING FURTHER\n\n The Built-in Exceptions (https://openstax.org/r/100exceptions) page of the Python Standard Library explains\n the meaning of each exception.\n\nTry and except\nPrograms can be designed to handle exceptions, rather than terminate. A try statement runs code that might\nraise an exception. An except clause runs code in response to the exception.\n\n EXAMPLE 14.5\n\n"
+      },
+      {
+        "id": "340996450a7b59eaa0ceb01fc7d93ef7",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 333,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": " Enter a filename: try_open.py\n try_open.py has 9 lines\n Have a nice day!\n\n If the filename does not exist, a FileNotFoundError is raised on line 3. The program then jumps to the\n except clause on line 7 and continues to run. The resulting output is:\n\n Enter a filename: try_open.txt\n File not found: try_open.txt\n Have a nice day!\n\n CONCEPTS IN PRACTICE\n\n Predicting output with exceptions\n For each code snippet, what is the output?"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q09",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Đúng thứ tự acquisition rồi exploration; source có mô tả iterative và surveys.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "ab8461f5404800a95bf5a81ccbe7a0bc",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 342,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "      data to extract insights and drive informed decision-making. The data science life cycle is the framework\n      followed by data scientists to complete a data science project. The data science life cycle is an iterative process\n      that starts with data acquisition, followed by data exploration. The data acquisition stage may involve\n      obtaining data from a source or collecting data through surveys and other means of data collection that are\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q10",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "np.array tạo ndarray từ list/tuple; ví dụ nhỏ ở relevance là minh họa trực tiếp phép chuyển đã nêu.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "db376f51fac28c7898a1a19283740925",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 344,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "       • Creating an ndarray by converting a Python list or tuple using the np.array() function.\n       • Using built-in functions like np.zeros() and np.ones() for creating an array of all 0's or all 1's,\n         respectively.\n       • Generating an array with random numbers using np.random.rand(n, m), where n and m are the\n         number of rows and columns, respectively.\n       • Loading data from a file. Ex: np.genfromtxt('data.csv', delimiter=',').\n\n       CHECKPOINT\n\n"
+      },
+      {
+        "id": "7374d51ca3794567e69daa301725e8c8",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 368,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "       np.array()                               Creates an ndarray from a list or tuple.\n\n       np.zeros()                               Creates an array of zeros.\n\n       np.ones()                                Creates an array of ones.\n\n       np.random.rand(n, m)                     Creates an array of random numbers with n rows and m columns\n\n       np.genfromtxt('data.csv',\n       delimiter=',')                           Creates an array from a CSV file.\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q11",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "np.zeros và np.ones đúng theo thứ tự 0 và 1.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "7374d51ca3794567e69daa301725e8c8",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 368,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "       np.array()                               Creates an ndarray from a list or tuple.\n\n       np.zeros()                               Creates an array of zeros.\n\n       np.ones()                                Creates an array of ones.\n\n       np.random.rand(n, m)                     Creates an array of random numbers with n rows and m columns\n\n       np.genfromtxt('data.csv',\n       delimiter=',')                           Creates an array from a CSV file.\n\n"
+      },
+      {
+        "id": "db376f51fac28c7898a1a19283740925",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 344,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "       • Creating an ndarray by converting a Python list or tuple using the np.array() function.\n       • Using built-in functions like np.zeros() and np.ones() for creating an array of all 0's or all 1's,\n         respectively.\n       • Generating an array with random numbers using np.random.rand(n, m), where n and m are the\n         number of rows and columns, respectively.\n       • Loading data from a file. Ex: np.genfromtxt('data.csv', delimiter=',').\n\n       CHECKPOINT\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q12",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Đủ Series 1D, DataFrame 2D và các cột có thể khác kiểu dữ liệu.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "203bded4a4017f27294570f427a72cd7",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 346,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "       • Data structure: Pandas implements two main data structures:\n         ◦ Series: A Series is a one-dimensional labeled array.\n         ◦ DataFrame: A DataFrame is a two-dimensional labeled data structure that consists of columns and\n           rows. A DataFrame can be thought of as a spreadsheet-like data structure where each column\n           represents a Series. DataFrame is a heterogeneous data structure where each column can have a\n           different data type.\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q13",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Đủ loc theo nhãn, iloc theo chỉ số nguyên; các đoạn được dẫn có cả cắt theo khoảng nhãn.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "cef9f2e1aeea36cd4188ca13d7f05b1d",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 355,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": " • Label-based indexing using loc[]: loc[] allows you to access data in a DataFrame using row/column\n    labels. Ex: df.loc[row_label, column_label] returns specific data at the intersection of row_label\n    and column_label.\n • Integer-based indexing using iloc[]: iloc[] allows you to access data in a DataFrame using integer-based\n    indexes. Integer indexes can be passed to retrieve specific data. Ex: df.iloc[row_index,\n"
+      },
+      {
+        "id": "89c5fc398039143b80f70b019fd1bc64",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 369,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": " loc[]                              Allows for accessing data in a DataFrame using row/column labels.\n\n iloc[]                             Allows for accessing data in a DataFrame using row/column\n                                    integer-based indexes.\n\n df[condition]                      Selects only the rows that meet the given condition.\n\n df.loc[start_row:end_row,\n start_column:end_column]           Slices using label ranges.\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q14",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "df[condition] chỉ giữ hàng thỏa điều kiện, đúng bảng trang 369.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "89c5fc398039143b80f70b019fd1bc64",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 369,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": " loc[]                              Allows for accessing data in a DataFrame using row/column labels.\n\n iloc[]                             Allows for accessing data in a DataFrame using row/column\n                                    integer-based indexes.\n\n df[condition]                      Selects only the rows that meet the given condition.\n\n df.loc[start_row:end_row,\n start_column:end_column]           Slices using label ranges.\n\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "q15",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Nêu đủ làm quen dữ liệu và đánh giá chất lượng; chi tiết EDA thêm đều có trong chunk trang 354.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "cd3429caa82ae78d24507096e33c346e",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 354,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "      Exploratory data analysis\n      Exploratory Data Analysis (EDA) is the task of analyzing data to gain insights, identify patterns, and\n      understand the underlying structure of the data. During EDA, data scientists visually and statistically examine\n      data to uncover relationships, anomalies, and trends, and to generate hypotheses for further analysis. The\n      main goal of EDA is to become familiar with the data and assess the quality of the data. Once data are\n"
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối đủ evidence và nguồn cho toàn bộ yêu cầu chính; đã đối chiếu source/page/text."
+  },
+  {
+    "query_id": "u01",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Từ chối con số giới hạn Windows 11/NTFS, không bịa GB. Corpus audit không thấy thông tin này; kiểm tra citation nền riêng.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "de88e77d68304a74ed2f8a5a88b0e70f",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 324,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "      The write() function does not automatically add a newline character as the print() function does. A\n      newline must be added explicitly by adding a newline ('\\n') character.\n\n      The write() function writes automatically to a temporary store called the file buffer. To ensure that the\n\n      Access for free at openstax.org"
+      }
+    ],
+    "abstention_correct": true
+  },
+  {
+    "query_id": "u02",
+    "reviewer": "Codex source-based draft",
+    "student_confirmed": false,
+    "reason": "Từ chối bội số tăng tốc trên CPU cụ thể, không bịa phép đo. Corpus chỉ có mô tả hiệu năng định tính; kiểm tra citation nền riêng.",
+    "citation_support": [
+      true,
+      false
+    ],
+    "citation_reviews": [
+      {
+        "id": "7739ee5ae614f39deb1c31e064ac63f8",
+        "supported": true,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 344,
+        "reason": "Đoạn này hỗ trợ các khẳng định gắn citation tương ứng; không chỉ kiểm tra ID.",
+        "evidence_text": "        3. What is the benefit of using anndarray object compared to a list?\n            a. computational efficiency\n            b. array-oriented computing\n            c. memory efficiency\n            d. all the above\n\n      NumPy operations\n      In addition to the ndarray data type, NumPy's operations provide optimized performance for large-scale\n      computation. The key features of NumPy include:\n\n"
+      },
+      {
+        "id": "b2fb1d3cb08e8248eae442d61243aac9",
+        "supported": false,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "page": 345,
+        "reason": "Chunk chỉ mô tả thao tác mảng và đại số tuyến tính, không hỗ trợ lợi ích bộ nhớ so với list được gắn citation này.",
+        "evidence_text": "15.2 • NumPy   335\n\n  exponential, and logarithmic functions.\n• Array manipulation: NumPy provides various functions to manipulate the shape, size, and structure of\n  arrays. These include reshaping, transposing, concatenating, splitting, and adding or removing elements\n  from arrays.\n• Linear algebra operations: NumPy offers a set of linear algebra functions for matrix operations, like matrix\n  multiplication, matrix inversion, eigenvalues, and eigenvectors.\n\nCHECKPOINT\n\n"
+      }
+    ],
+    "abstention_correct": true
+  }
+]

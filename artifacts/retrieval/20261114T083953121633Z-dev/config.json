@@ -1,0 +1,65 @@
+{
+  "split": "dev",
+  "methods": [
+    "dense",
+    "lexical",
+    "hybrid"
+  ],
+  "queries": "original Vietnamese, no rewriting",
+  "top_k": 3,
+  "budget_chars": 4000,
+  "candidates": 10,
+  "rrf_constant": 60,
+  "query_ids": [
+    "q01",
+    "q02",
+    "q03",
+    "q04",
+    "q05",
+    "q06",
+    "q07",
+    "q08",
+    "q09",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15"
+  ],
+  "selection_rule": "Max Evidence Hit@3, then Hit@1, then Context Evidence Rate, then lower median query latency; fixed method order breaks final ties.",
+  "matching": "source/page + full primary OR alternative evidence; whitespace normalized",
+  "context": "single retrieval top-3; deduplicate whole chunks fitting character budget",
+  "scope": "retrieval-only dev benchmark; no model-generated answers",
+  "code_sha256": {
+    "benchmark_retrieval.py": "5d442317a87bf494b8870eb3b454a6641f4597d399098003f52468039a707fdf",
+    "retrieval.py": "b9166884694e628a3ea32ca83d2a3c941e5889b4d2c10c690f60c0694475fb8b",
+    "day7_agent.py": "93d8a9d90059f5cc0cb51d7863f9fe779fdc3d4673cb1d7e9505d163f8532ef8",
+    "baseline.py": "03b8b16c42be7d19c820e506f4cea2a7496c462a00c77d1cfc9e7fc972301fdf"
+  },
+  "retrieval": {
+    "strategy": "C",
+    "chunks": 252,
+    "model": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimensions": 384,
+    "database": {
+      "postgres": "16.16 (Debian 16.16-1.pgdg12+1)",
+      "pgvector": "0.8.7"
+    },
+    "fingerprints": {
+      "config_sha256": "9945148689a3379d22fe4e487c003967a037d2724954388521de8677730038e6",
+      "questions_sha256": "81bb90bb97dbf49bc0a9399b16b0ffe5e05a2a8b6f473d37f8c5a6c2a9c4ab93",
+      "pages_sha256": "383fb2b1990351e9856237f08d9f6583fd03bb1f52ddef4871f230b1d356a1c1",
+      "source_code_sha256": "9411d1f3013d5cb422eda2fc55f880933fe06a2319d200830208dfcdd024218f"
+    },
+    "read_only": true,
+    "method": "dense",
+    "hybrid_candidates_per_retriever": 10,
+    "rrf_constant": 60,
+    "chunk_snapshot_sha256": "83594ca4e3a14e6b1c8aa2952c239b6da6b7f0269a5e7a7037df9cb42b82f7ee",
+    "lexical": "NFC/casefold word tokens; TF-IDF L2 cosine; global corpus IDF"
+  },
+  "shared_setup_seconds": 7.793297239997628,
+  "warmup_seconds": 0.02683014899957925
+}

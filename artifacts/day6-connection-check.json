@@ -1,0 +1,102 @@
+{
+  "checked_at": "2026-11-14T08:11:32.564064+00:00",
+  "status": "ok",
+  "purpose": "Day 7 readiness smoke check; not a benchmark run",
+  "database_versions": {
+    "postgres": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector": "0.8.7"
+  },
+  "chunk_counts": {
+    "A": 222,
+    "B": 252,
+    "C": 252
+  },
+  "model": "intfloat/multilingual-e5-small",
+  "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dimensions": 384,
+  "day6_fingerprints_match": true,
+  "strategy": "C",
+  "query_id": "q01",
+  "split": "dev",
+  "question": "read() và readline() khác nhau như thế nào về phần nội dung đọc từ file và kiểu giá trị trả về?",
+  "filters": {},
+  "timings_seconds": {
+    "model_load": 12.748539349999191,
+    "query_embedding": 0.11027365300105885,
+    "search": 0.016401821001636563
+  },
+  "hits": [
+    {
+      "chunk_id": "c751dd32ac6d8cfabd64d8712fd5be8a",
+      "document_id": "openstax-introduction-python-ch14-15",
+      "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+      "page": 320,
+      "text": "      Using read() and reading lines\n      Python provides functions that can be called on a file object for reading the contents of a file:\n\n        • The read() function reads the contents of a file and returns a string.\n        • The readline() function reads the next line in a file and returns a string.\n        • The readlines() function reads the individual lines of a file and returns a string list containing all the\n            lines of the file in order.\n\n       EXAMPLE 14.1\n\n",
+      "metadata": {
+        "page": 320,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "chapter": 14,
+        "page_id": "openstax-introduction-python-ch14-15:pdf-320",
+        "chunking": "paragraph:500",
+        "end_char": 1440,
+        "language": "en",
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+        "start_char": 952,
+        "attribution": "Access for free at openstax.org.",
+        "document_id": "openstax-introduction-python-ch14-15",
+        "printed_page": 310,
+        "chapter_title": "Files",
+        "counted_content_page": true
+      },
+      "score": 0.8646605610847473
+    },
+    {
+      "chunk_id": "b796d4126ecb21214c47085df3047f4f",
+      "document_id": "openstax-introduction-python-ch14-15",
+      "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+      "page": 330,
+      "text": "       File types and CSV files\n         5. Why does readlines() work for reading the rows in a CSV file?\n             a. readlines() reads line by line using the newline \\n character.\n             b. readlines() is not appropriate for reading a CSV file.\n             c. readlines() automatically recognizes a CSV file and works accordingly.\n\n",
+      "metadata": {
+        "page": 330,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "chapter": 14,
+        "page_id": "openstax-introduction-python-ch14-15:pdf-330",
+        "chunking": "paragraph:500",
+        "end_char": 724,
+        "language": "en",
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+        "start_char": 380,
+        "attribution": "Access for free at openstax.org.",
+        "document_id": "openstax-introduction-python-ch14-15",
+        "printed_page": 320,
+        "chapter_title": "Files",
+        "counted_content_page": true
+      },
+      "score": 0.8515151231577934
+    },
+    {
+      "chunk_id": "d95196df02cd083d883443d53049a8ab",
+      "document_id": "openstax-introduction-python-ch14-15",
+      "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+      "page": 322,
+      "text": "         4. What is the correct way to use the read() function to read the contents of input.txt into a string\n             file_str?\n             a. file_str = read(fileobj)\n             b. file_str = read(\"input.txt\")\n             c. file_str = fileobj.read()\n\n         5. What is the correct way to use the readlines() function?\n             a. file_lines = readlines(fileobj)\n             b. file_lines = fileobj.readlines()\n\n",
+      "metadata": {
+        "page": 322,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "chapter": 14,
+        "page_id": "openstax-introduction-python-ch14-15:pdf-322",
+        "chunking": "paragraph:500",
+        "end_char": 794,
+        "language": "en",
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+        "start_char": 364,
+        "attribution": "Access for free at openstax.org.",
+        "document_id": "openstax-introduction-python-ch14-15",
+        "printed_page": 312,
+        "chapter_title": "Files",
+        "counted_content_page": true
+      },
+      "score": 0.8507535457611084
+    }
+  ]
+}

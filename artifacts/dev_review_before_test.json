@@ -1,0 +1,18 @@
+{
+  "reviewed_at": "2026-11-14T09:04:32.370493+00:00",
+  "reviewer": "Codex, second source-based pass; not student confirmation",
+  "selection_changed": false,
+  "agent_code_changed": false,
+  "kept_policy": "Conservative source support: extra function names or claims must be supported by the cited chunk; core answer correctness alone does not establish every citation.",
+  "review_notes": [
+    "Retained q03 grade 1 for all configurations: cast-to-string supported, explicit str() not stated in cited chunk. This conservative annotation is subjective and visible for student review.",
+    "Retained q04 source-identity concern for english/relevance: cited table labels file.write([...]) rather than clearly naming writelines.",
+    "Retained baseline/u01 and relevance/u02 unsupported background citations; abstention remains correct because no unsupported numeric answer was given."
+  ],
+  "review_sha256": {
+    "baseline": "b54941b330e781ea1998c2401ae0936dbed74ae2809698fda2ccea799211f054",
+    "english": "f0abdc03f3faea0315fc11cca197e2e395f77e2356cc1015fc304feec4e9f2b1",
+    "relevance": "86a1596fe72d4c2bf9dab71152c81230d08d48520e076a701203e4e082d30e17"
+  },
+  "student_confirmed": false
+}

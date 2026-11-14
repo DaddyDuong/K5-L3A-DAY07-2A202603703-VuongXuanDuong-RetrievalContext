@@ -1,0 +1,11 @@
+{
+  "status": "development discovery run; superseded by format-validation fixes",
+  "total_runs": 51,
+  "errors": 4,
+  "reported_cost_usd": 0.00765749,
+  "remaining_issues": [
+    "Python indexing without backticks still confused citation extraction",
+    "Some model responses listed citations but omitted inline citation markers"
+  ],
+  "next_change": "Ignore bare Python subscriptions and allow one JSON/citation-format retry for every configuration. No quality-driven retries. Rerun all 51 cases under the same common fix."
+}

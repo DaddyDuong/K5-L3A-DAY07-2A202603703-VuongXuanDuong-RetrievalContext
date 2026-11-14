@@ -1,0 +1,225 @@
+[
+  {
+    "query_id": "t01",
+    "reviewer": "Codex source-based review",
+    "student_confirmed": false,
+    "reason": "Đủ default read-only, không cho thay đổi; các chunk trang 323/324 hỗ trợ r và ví dụ w.",
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "308f8a270ab85a4520fc9004b15e9a85",
+        "supported": true,
+        "page": 323,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "Opening a file for writing\nA file may be opened for reading, allowing no changes, or for writing, allowing changes to occur in the file. The\nmode defines whether a file is opened for reading only or for writing. The default mode of the open()\nfunction is reading only. A second mode parameter defines the mode.\n\nEx: open(\"output.txt\", 'w') opens the output.txt file in writing mode. The following table lists common\nmodes.",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "88180081bd194b790ff3b20629755314",
+        "supported": true,
+        "page": 324,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "                        When no mode parameter is used, the default is to open a file           open(\"input.txt\",\n                        in read mode.                                                           'r')\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "dc2cf9daf7a2fe9065af9b7c9d67f915",
+        "supported": true,
+        "page": 324,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "                                                                                                fileobj =\n                        Read mode:                                                              open(\"input.txt\")\n                        Open the specified file for reading.                                    same as:\n        'r'             If the file does not exist, an error occurs.                            fileobj =\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối chứa đủ bằng chứng và nguồn cho yêu cầu chính; đối chiếu trực tiếp primary gold trong trang/chunk."
+  },
+  {
+    "query_id": "t02",
+    "reviewer": "Codex source-based review",
+    "student_confirmed": false,
+    "reason": "Đường dẫn cùng tên file và ví dụ path có nguồn; điều kiện cùng thư mục và ghi chú Windows được dẫn từ đoạn tương ứng.",
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "c21da2737a584f51cc929be150e2ca5d",
+        "supported": true,
+        "page": 327,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "Often a programmer needs to open files from folders other than the one in which the Python file exists. A path\nuniquely identifies a folder location on a computer. The path can be used along with the filename to open a file\nin any folder location. Ex: To open a file named logfile.log located in /users/turtle/desktop the following\ncan be used:\n\nfileobj = open(\"/users/turtle/desktop/logfile.log\")",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "2aadc3ad4c96466bbe0df6411a59c7c9",
+        "supported": true,
+        "page": 327,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": " • Demonstrate how to access files within a file system.\n • Demonstrate how to process a CSV file.\n\nOpening a file at any location\nWhen only the filename is used as the argument to the open() function, the file must be in the same folder as\nthe Python file that is executing. Ex: For fileobj = open(\"file1.txt\") in files.py to execute successfully,\nthe file1.txt file should be in the same folder as files.py.\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "63339e0ef0be269bc93b1634bf9533cf",
+        "supported": true,
+        "page": 328,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "      Table 14.2 Opening files on different paths. In each of the following cases, a file called output.txt is located in a different folder\n      than the Python folder. Windows uses backslash \\ characters instead of forward slash / characters for the path. If the backslash is\n      included directly in open(), then an additional backslash is needed for Python to understand the location correctly.\n\n       CONCEPTS IN PRACTICE\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối chứa đủ bằng chứng và nguồn cho yêu cầu chính; đối chiếu trực tiếp primary gold trong trang/chunk."
+  },
+  {
+    "query_id": "t03",
+    "reviewer": "Codex source-based review",
+    "student_confirmed": false,
+    "reason": "Đủ newline phân hàng và comma phân ô. Câu thêm về readlines được đoạn ví dụ hỗ trợ; việc tách theo dấu phẩy là suy luận trực tiếp từ định dạng đã dẫn và có code strip/split trong context.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "c97c9feccabf1403d741ce4ab7553fce",
+        "supported": true,
+        "page": 329,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "14.3 • Files in different locations and working with CSV files   319\n\ninformation as Unicode separated by commas. CSV files can be read using methods learned thus far, as seen in\nthe example below.\n\n Figure 14.2 CSV files. A CSV file is simply a text file with rows separated by newline \\n characters and cells separated by commas.\n\nRaw text of the file:\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "32038c63f96a770897d247c4e76b5524",
+        "supported": true,
+        "page": 329,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "Title, Author, Pages\\n1984, George Orwell, 268\\nJane Eyre, Charlotte Bronte,\n532\\nWalden, Henry David Thoreau, 156\\nMoby Dick, Herman Melville, 538\n\n EXAMPLE 14.3\n\n Processing a CSV file\n\n \"\"\"Processing a CSV file.\"\"\"\n # Open the CSV file for reading\n file_obj = open(\"books.csv\")\n\n # Rows are separated by newline \\n characters, so readlines() can be used to read in\n all rows into a string list\n csv_rows = file_obj.readlines()\n\n list_csv = []\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối chứa đủ bằng chứng và nguồn cho yêu cầu chính; đối chiếu trực tiếp primary gold trong trang/chunk.",
+    "inference_note": "Phần tách hàng theo comma là suy luận từ separators đã dẫn c97; chunk 320 hỗ trợ readlines. Context còn có chunk 689 với strip/split nhưng agent không dẫn ID đó. Không coi đây là bằng chứng về bộ parser CSV tổng quát xử lý quote/escape."
+  },
+  {
+    "query_id": "t04",
+    "reviewer": "Codex source-based review",
+    "student_confirmed": false,
+    "reason": "unique trả array giá trị duy nhất, ví dụ Season khớp bảng. Không tự khẳng định quy tắc sắp xếp chưa có evidence.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "9790d62776574ecc0da0b6f8d2249664",
+        "supported": true,
+        "page": 369,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": " df.describe()                      Generates the column count, mean, standard deviation, minimum,\n                                    maximum, and quartiles.\n\n df.value_counts()                  Counts the occurrences of unique values in a column and presents\n                                    them in descending order.\n\n df.unique()                        Returns an array of unique values in a column.\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "aa761aad8cde05abccaf8bbd95382847",
+        "supported": true,
+        "page": 353,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "                        Returns an\n                        array of\n                        unique\n unique()               values in a   df['Season']\n                                                        ['Summer' 'Fall' 'Winter']\n                        column        \\.unique()\n                        when called\n                        on a\n                        column.\n\nTable 15.4 DataFrame functions.",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối chứa đủ bằng chứng và nguồn cho yêu cầu chính; đối chiếu trực tiếp primary gold trong trang/chunk."
+  },
+  {
+    "query_id": "t05",
+    "reviewer": "Codex source-based review",
+    "student_confirmed": false,
+    "reason": "Scatter plot mô tả quan hệ hai biến/correlation/cluster/outlier đúng bảng; plt.scatter(x,y) có đoạn phương thức hỗ trợ.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "45f6201ebfb8d56bbeb858ab63a37e13",
+        "supported": true,
+        "page": 361,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "                    Individual data points representing the relationship between       Identify correlations,\n Scatter plot\n                    two variables                                                      clusters, and outliers.\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "b3401fa213352bc8920c0a2501d61f1e",
+        "supported": true,
+        "page": 364,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "354   15 • Data Science\n\n                       Plot type                                                   Method\n\n                                                     The plt.scatter(x, y) function takes in two inputs, x and y, and\n        Scatter plot                                 plots points representing (x, y) pairs.\n\n        Example                                      Output\n\n        import matplotlib.pyplot as\n        plt\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      }
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "context_reason": "Context cuối chứa đủ bằng chứng và nguồn cho yêu cầu chính; đối chiếu trực tiếp primary gold trong trang/chunk."
+  },
+  {
+    "query_id": "tu01",
+    "reviewer": "Codex source-based review",
+    "student_confirmed": false,
+    "reason": "Từ chối suy đoán tham số giải mã AES-256. Background pd.read_csv tạo DataFrame có nguồn; audit toàn corpus không có AES/encryption.",
+    "citation_support": [
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "124ae486a5a0e739cdac73b753fbf2e2",
+        "supported": true,
+        "page": 368,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "       pd.DataFrame()                           Creates a DataFrame from a list, dictionary, or an array.\n\n       pd.read_csv()                            Creates a DataFrame from a CSV file.\n\n       df.head()                                Returns the first few rows of a DataFrame.\n\n      Table 15.13 Chapter 15 reference.\n\n      Access for free at openstax.org",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      }
+    ],
+    "abstention_correct": true
+  },
+  {
+    "query_id": "tu02",
+    "reviewer": "Codex source-based review",
+    "student_confirmed": false,
+    "reason": "Từ chối con số DPI, không đoán default. Hai nguồn nền chỉ tạo/hiển thị chart; audit toàn corpus không có dpi/savefig.",
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_reviews": [
+      {
+        "id": "626db9e9542e12df4acdfa2566198b4c",
+        "supported": true,
+        "page": 363,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "  # Data\n  month = [\"Jan\", \"Feb\",\n  \"Mar\", \"Apr\", \"May\"]\n  inflation = [6.41, 6.04,\n  4.99, 4.93, 4.05]\n\n  # Create the line chart\n  plt.plot(month, inflation,\n  marker=\"o\",\n  linestyle=\"-\",\n  color=\"blue\")\n\n  # Customize the chart\n  plt.title(\"Inflation trend\n  in 2023\")\n  plt.xlabel(\"Month\")\n  plt.ylabel(\"Inflation\")\n\n  # Display the chart\n  plt.show()\n\nTable 15.9 Matplotlib functionalities. Line plot.",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      },
+      {
+        "id": "fdadedb85d8f00088c1a255d721e5a12",
+        "supported": true,
+        "page": 366,
+        "source": "data/raw/Introduction_to_Python_Programming-WEB.pdf",
+        "evidence_text": "       # Data: random 100\n       samples\n       data =\n       [np.random.normal(0,\n       5, 100)]\n\n       # Create the box\n       plot\n       plt.boxplot(data)\n\n       # Customize the\n       chart\n       plt.title(\"Box Plot\n       of random values\")\n       plt.xlabel(\"Data\n       Distribution\")\n       plt.ylabel(\"Values\")\n\n       # Display the chart\n       plt.show()\n\n      Table 15.12 Matplotlib functionalities. Box plot.\n\n       CONCEPTS IN PRACTICE\n\n",
+        "reason": "Hỗ trợ khẳng định liên quan, đối chiếu cùng các nguồn khác được dẫn trong câu trả lời; không chỉ kiểm tra ID."
+      }
+    ],
+    "abstention_correct": true
+  }
+]
