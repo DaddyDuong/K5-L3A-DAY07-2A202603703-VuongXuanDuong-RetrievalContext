@@ -2,7 +2,8 @@
 
 Học viên: Vương Xuân Dương — 2A202603703 — K5-L3A.
 Kết quả đã có tại [báo cáo](report/individual/2A202603703_VuongXuanDuong.md).
-Các nhãn nội dung là Codex draft, chưa phải học viên xác nhận.
+Nhãn nội dung do Codex soạn, học viên đã đọc và xác nhận sau test, không đổi nhãn
+([xác nhận](artifacts/student_confirmation.json)).
 
 ## Xem kết quả có sẵn, không cần model/API/database
 

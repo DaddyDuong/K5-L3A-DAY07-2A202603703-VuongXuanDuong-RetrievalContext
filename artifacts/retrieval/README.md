@@ -24,7 +24,7 @@ Hybrid không cải thiện tổng điểm nhưng thay đổi các câu truy xu�
 ## Phân tích lỗi dev
 
 Các nhận xét dưới đây do Codex đối chiếu query, gold và candidate ranking;
-chưa phải nhãn đánh giá thủ công được học viên xác nhận.
+học viên đã đọc và xác nhận ([xác nhận](../student_confirmation.json)).
 
 **q06 — thư viện trích xuất thông tin PDF trong chương 14.**
 Evidence về PyPDF nằm ở trang PDF 331. Dense không lấy được chunk này trong
@@ -72,8 +72,8 @@ Chi phí API retrieval trong benchmark bằng 0 USD do chạy local; chưa tính
 phần cứng/điện. Chi phí model ở bảng smoke riêng là số do provider trả.
 Database Day 6 chỉ đọc, không chỉnh index hay chạy test Day 7.
 
-Đã hoàn thành bước triển khai và so sánh ba retriever. Toàn bộ lab còn cần
-câu thiếu bằng chứng, thí nghiệm agent/context, đánh giá test và báo cáo.
+Các bước tiếp theo đã hoàn thành: [thí nghiệm agent trên dev](../agent-dev/README.md)
+và [đánh giá test](../agent-test/README.md).
 
 Access for free at openstax.org. Nội dung chunk theo CC BY-NC-SA 4.0;
 nguồn và attribution chi tiết được giữ trong metadata của trace và hồ sơ Day 6.

@@ -11,7 +11,7 @@ baseline CLI dùng schema `gold` bên dưới nếu chưa chuyển đổi.
 `dev_absence_audit.json` ghi SHA-256 corpus, tất cả 52 trang được quét, từ khóa,
 trang liên quan và kết luận cho hai câu thiếu bằng chứng. Không dựa vào việc
 top-k không tìm thấy để kết luận thiếu thông tin. Nhãn do Codex soạn/đối chiếu,
-chưa được học viên xác nhận. Hai file trên chỉ chứa dev.
+học viên đã đọc và xác nhận ([xác nhận](../artifacts/student_confirmation.json)). Hai file trên chỉ chứa dev.
 
 `test_cases.json` có 5 câu có đáp án mới và 2 câu thiếu bằng chứng mới, được
 chốt sau dev và trước khi chạy test. `test_absence_audit.json` kiểm tra thiếu

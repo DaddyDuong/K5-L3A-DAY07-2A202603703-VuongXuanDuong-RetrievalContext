@@ -120,7 +120,8 @@ Xem [kết quả retrieval](artifacts/retrieval/README.md),
 [thí nghiệm trên 17 câu dev](artifacts/agent-dev/README.md),
 [đánh giá test đã khóa](artifacts/agent-test/README.md) và
 [báo cáo cá nhân](report/individual/2A202603703_VuongXuanDuong.md).
-Các phần này đã được thực hiện local; review nội dung là Codex draft.
+Review nội dung do Codex soạn, học viên đã đọc và xác nhận
+([xác nhận](artifacts/student_confirmation.json)).
 
 Tool calling theo tài liệu chính thức:
 https://openrouter.ai/docs/api/api-reference/chat/send-chat-completion-request
@@ -162,8 +163,8 @@ python3 starter/summarize_agent_dev.py artifacts/agent-dev/<timestamp>
 
 Tiêu chí chọn đã ghi trước khi chạy: không lỗi và từ chối đúng cả hai câu thiếu
 bằng chứng; ưu tiên tổng grounded-answer, citation support, context evidence,
-chi phí rồi latency. Nhãn do Codex chấm là **sơ bộ**, không ghi thành nhãn người
-học đã xác nhận. Selection trên dev không tự kích hoạt chạy test.
+chi phí rồi latency. Lúc chọn trên dev, nhãn là bản Codex chấm
+sơ bộ; học viên xác nhận sau test và không đổi nhãn nào. Selection trên dev không tự kích hoạt chạy test.
 
 ## Test mới sau khi khóa cấu hình
 

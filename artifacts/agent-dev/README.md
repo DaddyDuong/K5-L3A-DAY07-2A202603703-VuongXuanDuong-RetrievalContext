@@ -9,8 +9,10 @@ Có [summary JSON](20261114T085042869723Z/summary.json),
 [english](20261114T085042869723Z/english/reviews.json),
 [relevance](20261114T085042869723Z/relevance/reviews.json).
 
-**Review do Codex đọc và đối chiếu nguồn, là nhãn sơ bộ; chưa được học viên
-xác nhận. Không gọi đây là benchmark test độc lập hoặc nhãn người học đã duyệt.**
+**Review do Codex đọc và đối chiếu nguồn. Học viên đã đọc và xác nhận sau khi
+chạy test, không đổi nhãn nào ([xác nhận](../student_confirmation.json)). Lúc chọn
+cấu hình, nhãn còn là bản Codex sơ bộ; các file đã freeze vẫn ghi
+`student_confirmed: false` đúng với thời điểm đó.**
 
 ## Điều kiện so sánh
 
@@ -64,7 +66,7 @@ với retrieval một lượt, chưa chứng minh riêng instruction English có
 **q03 — câu trả lời có chi tiết vượt nguồn dẫn.** Cả ba nêu đúng yêu cầu cast
 sang chuỗi, nhưng bổ sung cụ thể hàm `str()` trong khi chunk được dẫn chỉ nói
 cast sang string. Chấm bảo thủ 1/2 và không chấp nhận citation cho toàn bộ
-chi tiết mở rộng này; ghi rõ lý do để học viên có thể xem lại tiêu chí. Không
+chi tiết mở rộng này; ghi rõ lý do. Không
 coi một hàm đúng kiến thức Python là tự động được nguồn này hỗ trợ.
 
 **q04 — citation không làm rõ tên phương thức mở rộng.** English/relevance
@@ -96,13 +98,13 @@ indexing với citation, boolean `finish.abstain`, câu trả lời ngắn với
 lệ, và một format-only retry. Chạy lại toàn bộ 51 case sau thay đổi chung,
 không chọn lọc câu tốt để thay thế kết quả.
 
-33/33 test offline pass. Các unit test mới kiểm tra thay chunk khi budget đầy,
+Tại thời điểm chạy dev: 33/33 test offline pass. Các unit test mới kiểm tra thay chunk khi budget đầy,
 rerank dùng câu hỏi gốc và deduplicate, instruction English, phân biệt code/
 citation, explicit abstention và giới hạn format retry. Database chỉ đọc.
 
 Selection được lưu trước khi tạo/chạy test. Sau bước dev đã hoàn thành
 [test trên 7 câu mới](../agent-test/README.md); baseline và selected dùng chung
-trace vì cùng cấu hình. Nhãn vẫn là Codex draft, chưa phải người học xác nhận.
+trace vì cùng cấu hình.
 
 Access for free at openstax.org. Evidence/chunk theo CC BY-NC-SA 4.0; giữ
 attribution và nguồn trong trace. Không chứa API key hoặc database URL.

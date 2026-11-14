@@ -1,0 +1,19 @@
+{
+  "confirmed_by": "Vương Xuân Dương — 2A202603703 — K5-L3A",
+  "confirmed_on": "2026-11-14",
+  "statement": "Học viên đã đọc và xác nhận benchmark (câu hỏi, đáp án, evidence, audit thiếu evidence) và toàn bộ nhãn review dev/test do Codex soạn. Không thay đổi nhãn nào khi xác nhận.",
+  "labels_changed": false,
+  "timing": "Xác nhận thực hiện sau khi official test đã chạy (test_started 20261114T090432454098Z). Lựa chọn cấu hình trên dev dùng nhãn Codex trước khi học viên xác nhận.",
+  "frozen_files_note": "Các file đã freeze vẫn ghi student_confirmed=false và label_status Codex draft vì đó là trạng thái thật tại thời điểm freeze; không sửa để giữ nguyên hash trong test-freeze.json.",
+  "files_sha256": {
+    "data/benchmark.json": "ad88893ae6c7c14145f4e4efbaf7f93e6ffccdd763cc21e5d5d082a9d3273690",
+    "data/dev_cases.json": "3d5216ac560c656d630465f57ab63989786665e2b967c70cb07269421a2732ac",
+    "data/test_cases.json": "394e884ff5440d9fe57d046d6c674bbdc5b81ee74256b8024d70232a714a6576",
+    "data/dev_absence_audit.json": "24622435122bc4950a97cf692cea3fef763f49d644de500db9f2dda4f1025942",
+    "data/test_absence_audit.json": "049490548329a032c01cc22d8b74e7093099c29d3b74a44ed718030ffa73d8f8",
+    "artifacts/agent-dev/20261114T085042869723Z/baseline/reviews.json": "b54941b330e781ea1998c2401ae0936dbed74ae2809698fda2ccea799211f054",
+    "artifacts/agent-dev/20261114T085042869723Z/english/reviews.json": "f0abdc03f3faea0315fc11cca197e2e395f77e2356cc1015fc304feec4e9f2b1",
+    "artifacts/agent-dev/20261114T085042869723Z/relevance/reviews.json": "86a1596fe72d4c2bf9dab71152c81230d08d48520e076a701203e4e082d30e17",
+    "artifacts/agent-test/20261114T090432454098Z/baseline/reviews.json": "9dc7106986d9b0ef584babc3fdc530c2247942afb6025a4446ce8f89b1d55b1d"
+  }
+}

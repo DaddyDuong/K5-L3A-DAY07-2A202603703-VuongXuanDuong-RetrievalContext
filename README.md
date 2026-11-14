@@ -29,8 +29,8 @@ Index một tài liệu thực tế từ **100 trang** có bảng, ảnh và bi�
 Đã đánh giá [7 câu test mới sau khi khóa cấu hình](artifacts/agent-test/README.md).
 Xem [hướng dẫn tái lập](REPRODUCE.md),
 [báo cáo cá nhân](report/individual/2A202603703_VuongXuanDuong.md) và
-[trạng thái bài nộp](SUBMISSION_STATUS.md). Nhãn do Codex đối chiếu nguồn,
-chưa được học viên xác nhận.
+[trạng thái bài nộp](SUBMISSION_STATUS.md). Nhãn do Codex soạn đối chiếu nguồn,
+học viên đã đọc và xác nhận ([xác nhận](artifacts/student_confirmation.json)).
 
 1. Đọc [hướng dẫn](GUIDE.md), [rubric](RUBRIC.md) và [quy tắc](RULES.md).
 2. Tạo repo cá nhân theo [cách nộp bài](SUBMISSION.md), chuẩn bị đầu ra Day 6 và model hỗ trợ tool calling.

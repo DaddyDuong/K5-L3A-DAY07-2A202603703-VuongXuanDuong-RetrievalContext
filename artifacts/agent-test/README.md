@@ -6,7 +6,8 @@ Xem [summary JSON](20261114T090432454098Z/summary.json),
 [review từng câu/citation](20261114T090432454098Z/baseline/reviews.json),
 [config và alias](20261114T090432454098Z/config.json).
 
-**Nhãn do Codex đọc đối chiếu nguồn, là sơ bộ; chưa được học viên xác nhận.**
+**Nhãn do Codex đọc đối chiếu nguồn; học viên đã đọc và xác nhận sau test, không
+đổi nhãn nào ([xác nhận](../student_confirmation.json)).**
 
 ## Thiết kế và khóa trước test
 
@@ -35,14 +36,14 @@ là hai alias trỏ cùng 7 trace. Không chạy hai lần hoặc nhân đôi m�
 | Hit@1 lần tìm đầu | 4/5 | 80% |
 | Evidence Hit@3 lần tìm đầu | 5/5 | 100% |
 | Evidence trong context cuối | 5/5 | 100% |
-| Grounded answer | 10/10 điểm | 100% theo nhãn sơ bộ |
-| Citation có trong context và hỗ trợ nội dung | 15/15 | 100% theo nhãn sơ bộ |
+| Grounded answer | 10/10 điểm | 100% |
+| Citation có trong context và hỗ trợ nội dung | 15/15 | 100% |
 | Câu trả lời có citation | 5/5 | 100% |
 | Từ chối đúng câu thiếu evidence | 2/2 | 100% |
 | Từ chối nhầm câu có đáp án | 0/5 | 0% |
 | Dùng retrieval tool | 7/7 | 100% |
 
-Không có lỗi thực thi. Context chấm thủ công bởi Codex: 0 điểm = 0 câu,
+Không có lỗi thực thi. Context do Codex chấm, học viên xác nhận: 0 điểm = 0 câu,
 1 điểm = 0 câu, 2 điểm = 5 câu. Grounded answer 0/1/2: 0/0/5; trung bình
 2,0/2. Nhãn và lý do riêng cho từng câu/citation trong reviews.json.
 
